@@ -40,6 +40,7 @@ static int inet_pton6(const char *src, unsigned char *dst);
 int uv_inet_ntop(int af, const void* src, char* dst, size_t size) {
   switch (af) {
   case AF_INET:
+    printf("src = %s",src)
     return (inet_ntop4(src, dst, size));
   case AF_INET6:
     return (inet_ntop6(src, dst, size));
